@@ -19,9 +19,11 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
-type MyParameters<T extends (...args: any[]) => any> = any
-
+/**
+ * NOTE: Here you learned how to extract parameter types
+ */
+type MyParameters<T extends (...args: any[]) => any> = T extends (...any: infer S) => any ? S : any
+type temp = MyParameters<typeof bar>
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 

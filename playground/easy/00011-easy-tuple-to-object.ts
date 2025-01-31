@@ -20,7 +20,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TupleToObject<T extends ReadonlyArray<string|number|symbol>> = {
+type TupleToObject<T extends ReadonlyArray<string | number | symbol>> = {
   [P in T[number]]: P
 }
 

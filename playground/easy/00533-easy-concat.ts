@@ -17,13 +17,17 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
-type Concat<T, U> = any
+/**
+ * NOTE: hear you learned about type spreading.
+ */
+type Tuple = readonly unknown[]
+type Concat<T extends Tuple, U extends Tuple> = [...T, ...U]
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 const tuple = [1] as const
+type temp = Concat<[1, 2], [3, 4]>
 
 type cases = [
   Expect<Equal<Concat<[], []>, []>>,

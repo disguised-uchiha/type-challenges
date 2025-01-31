@@ -32,7 +32,7 @@
 /* _____________ Your Code Here _____________ */
 
 type MyReadonly<T> = {
-  readonly [K in keyof T]: T[K]
+  readonly [key in keyof T]: T[key]
 }
 
 /* _____________ Test Cases _____________ */
