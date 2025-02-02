@@ -30,7 +30,9 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
+/**
+ * NOTE: learned about how to pick something out of a union types
+ */
 type MyPick<T, K extends keyof T> = {
   [key in K]: T[key]
 }
